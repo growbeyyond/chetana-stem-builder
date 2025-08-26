@@ -20,8 +20,10 @@ import {
 } from "lucide-react";
 
 const Curriculum = () => {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(headerRef, { rootMargin: '0px', once: true });
+  const { ref: headerRef, isInView: headerInView } = useInView({ 
+    threshold: 0.1, 
+    triggerOnce: true 
+  });
 
   const curriculumData = [
     {
@@ -266,8 +268,10 @@ const Curriculum = () => {
                 {/* Modules */}
                 <div className="grid gap-6">
                   {grade.modules.map((module, index) => {
-                    const moduleRef = useRef<HTMLDivElement>(null);
-                    const moduleInView = useInView(moduleRef, { rootMargin: '0px', once: true });
+                    const { ref: moduleRef, isInView: moduleInView } = useInView({ 
+                      threshold: 0.1, 
+                      triggerOnce: true 
+                    });
                     
                     return (
                       <Card 
@@ -378,8 +382,10 @@ const Curriculum = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {outcomes.map((outcome, index) => {
-                const outcomeRef = useRef<HTMLDivElement>(null);
-                const outcomeInView = useInView(outcomeRef, { rootMargin: '0px', once: true });
+                const { ref: outcomeRef, isInView: outcomeInView } = useInView({ 
+                  threshold: 0.1, 
+                  triggerOnce: true 
+                });
                 
                 return (
                   <div 

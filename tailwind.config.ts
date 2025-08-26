@@ -71,16 +71,18 @@ export default {
 					foreground: 'hsl(var(--info-foreground))'
 				}
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
-			},
-			boxShadow: {
-				'soft': 'var(--shadow-soft)',
-				'medium': 'var(--shadow-medium)',
-				'large': 'var(--shadow-large)'
-			},
+          backgroundImage: {
+            'gradient-primary': 'var(--gradient-primary)',
+            'gradient-hero': 'var(--gradient-hero)',
+            'gradient-card': 'var(--gradient-card)',
+            'gradient-accent': 'var(--gradient-accent)'
+          },
+          boxShadow: {
+            'soft': 'var(--shadow-soft)',
+            'medium': 'var(--shadow-medium)',
+            'large': 'var(--shadow-large)',
+            'glow': 'var(--shadow-glow)'
+          },
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -162,10 +164,11 @@ export default {
 				'wiggle': 'wiggle 1s ease-in-out infinite',
 				'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
-				'typing': 'typing 2s steps(40, end) forwards',
-				'blink': 'blink 1s infinite'
-			}
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+              'typing': 'typing 2s steps(40, end) forwards',
+              'blink': 'blink 1s infinite',
+              'spin-slow': 'spin 3s linear infinite'
+            }
+          }
+        },
+        plugins: [require("tailwindcss-animate")],
+      } satisfies Config;

@@ -22,8 +22,10 @@ import {
 } from "lucide-react";
 
 const About = () => {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(headerRef);
+  const { ref: headerRef, isInView: headerInView } = useInView({ 
+    threshold: 0.1, 
+    triggerOnce: true 
+  });
 
   const values = [
     {
@@ -211,8 +213,10 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => {
-                const valueRef = useRef<HTMLDivElement>(null);
-                const valueInView = useInView(valueRef);
+                const { ref: valueRef, isInView: valueInView } = useInView({ 
+                  threshold: 0.1, 
+                  triggerOnce: true 
+                });
                 
                 return (
                   <Card 
@@ -251,8 +255,10 @@ const About = () => {
 
             <div className="space-y-8">
               {milestones.map((milestone, index) => {
-                const milestoneRef = useRef<HTMLDivElement>(null);
-                const milestoneInView = useInView(milestoneRef);
+                const { ref: milestoneRef, isInView: milestoneInView } = useInView({ 
+                  threshold: 0.1, 
+                  triggerOnce: true 
+                });
                 
                 return (
                   <div 
@@ -297,8 +303,10 @@ const About = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {impactStats.map((stat, index) => {
-                const statRef = useRef<HTMLDivElement>(null);
-                const statInView = useInView(statRef);
+                const { ref: statRef, isInView: statInView } = useInView({ 
+                  threshold: 0.1, 
+                  triggerOnce: true 
+                });
                 
                 return (
                   <Card 

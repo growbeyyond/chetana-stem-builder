@@ -20,8 +20,10 @@ import {
 } from "lucide-react";
 
 const Programs = () => {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(headerRef, { rootMargin: '0px', once: true });
+  const { ref: headerRef, isInView: headerInView } = useInView({ 
+    threshold: 0.1, 
+    triggerOnce: true 
+  });
 
   const programs = [
     {
@@ -157,8 +159,10 @@ const Programs = () => {
           {/* Programs Grid */}
           <div className="space-y-12">
             {programs.map((program, index) => {
-              const cardRef = useRef<HTMLDivElement>(null);
-              const cardInView = useInView(cardRef, { rootMargin: '0px', once: true });
+              const { ref: cardRef, isInView: cardInView } = useInView({ 
+                threshold: 0.1, 
+                triggerOnce: true 
+              });
               
               return (
                 <Card 
