@@ -3,23 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <!-- SEO tags are managed by react-helmet-async in components -->
     <title>Chetana STEM Labs - Math & Physics by Robotics</title>
-    <meta name="description" content="Transform learning with Chetana STEM Labs. Teaching Math and Physics through robotics for students grades 3-10 in Hyderabad. NEP 2020 aligned curriculum with hands-on robotics education." />
-    <meta name="author" content="S. Prathyusha - Chetana STEM Labs" />
-    <meta name="keywords" content="STEM education, robotics learning, Math physics robotics, NEP 2020, Hyderabad STEM labs, school robotics programs, ATL setup, teacher training" />
-
-    <meta property="og:title" content="Chetana STEM Labs - Math & Physics by Robotics" />
-    <meta property="og:description" content="Making learning fun, practical, and future-ready. Transform Math and Physics education through hands-on robotics for grades 3-10." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- WhatsApp floating button -->
+    <div id="whatsapp-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+      <a 
+        href="https://wa.me/919705269485?text=Hi%20Chetana%20STEM%20Labs,%20I'm%20interested%20in%20your%20robotics%20programs" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          background-color: #25D366;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          transition: transform 0.3s ease;
+          text-decoration: none;
+        "
+        onmouseover="this.style.transform='scale(1.1)'"
+        onmouseout="this.style.transform='scale(1)'"
+        aria-label="Contact us on WhatsApp"
+      >
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+          <path d="M12.017 0c-6.627 0-12.011 5.384-12.011 12.011 0 2.114.55 4.096 1.515 5.817l-1.521 5.551 5.717-1.503c1.66.898 3.552 1.407 5.566 1.407 6.628 0 12.012-5.384 12.012-12.011s-5.384-12.272-12.278-12.272zm5.967 17.157c-.26.734-1.536 1.357-2.11 1.41-.574.054-1.055-.041-3.592-1.343-2.173-1.114-3.583-3.426-3.693-3.583-.11-.158-.898-1.19-.898-2.268 0-1.077.568-1.608.768-1.831.2-.223.437-.278.583-.278h.42s.134-.007.315.24c.18.248.615 1.499.668 1.607.054.108.09.235.018.379-.072.144-.108.233-.216.36-.108.126-.228.282-.326.379-.108.108-.221.224-.095.44.126.215.560.925 1.203 1.498.827.737 1.524 1.095 1.74 1.203.215.108.341.09.467-.054.126-.144.54-.63.685-.846.144-.215.288-.18.486-.108.198.072 1.255.592 1.471.7.215.108.36.162.413.252.054.09.054.522-.206 1.025z"/>
+        </svg>
+      </a>
+    </div>
   </body>
 </html>

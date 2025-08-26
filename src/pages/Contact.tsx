@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 import { 
   Phone, 
   Mail, 
@@ -100,6 +101,13 @@ const Contact = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Contact Us - Chetana STEM Labs | Get Started with Robotics Education"
+        description="Contact Chetana STEM Labs for STEM education programs in Hyderabad. Call 09705269485 or email chetanastemlabs@gmail.com. Transform your school's Math & Physics curriculum today."
+        keywords="contact Chetana STEM Labs, robotics education inquiry, STEM programs enrollment, Hyderabad education contact, school partnership inquiry"
+        path="/contact"
+      />
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -291,6 +299,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

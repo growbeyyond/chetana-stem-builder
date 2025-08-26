@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { 
   BookOpen, 
   Zap, 
@@ -172,6 +174,17 @@ const Curriculum = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="STEM Curriculum - Chetana STEM Labs | Grade-wise Robotics Learning Path"
+        description="Discover our comprehensive NEP 2020 aligned STEM curriculum. Grade-wise robotics programs from foundation (3-5) to advanced (9-10). Transform Math & Physics learning in Hyderabad."
+        keywords="STEM curriculum grades 3-10, NEP 2020 robotics curriculum, grade wise robotics learning, Math Physics robotics curriculum, Hyderabad STEM education"
+        path="/curriculum"
+      />
+      <StructuredData type="course" data={{
+        name: "Grade-wise STEM Curriculum",
+        description: "Comprehensive robotics-based curriculum covering Math and Physics concepts for grades 3-10"
+      }} />
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -322,6 +335,7 @@ const Curriculum = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { 
   GraduationCap, 
   Users, 
@@ -103,6 +105,17 @@ const Programs = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="STEM Programs - Chetana STEM Labs | Robotics Education in Hyderabad"
+        description="Explore our comprehensive STEM programs: School integration, after-school labs, ATL setup, and teacher training. Transform Math & Physics learning through robotics for grades 3-10."
+        keywords="STEM programs Hyderabad, school robotics integration, after school labs, ATL setup, teacher training robotics, NEP 2020 curriculum"
+        path="/programs"
+      />
+      <StructuredData type="course" data={{
+        name: "STEM Education Programs",
+        description: "Comprehensive robotics-based STEM education programs for schools, students, and teachers"
+      }} />
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -199,6 +212,7 @@ const Programs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import StructuredData from "@/components/StructuredData";
 import { 
   Heart, 
   Lightbulb, 
@@ -72,6 +74,14 @@ const About = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="About Us - Chetana STEM Labs | S. Prathyusha's Vision for STEM Education"
+        description="Learn about S. Prathyusha's journey and vision behind Chetana STEM Labs. Discover our mission to transform STEM education through robotics for 2000+ students across India."
+        keywords="S Prathyusha founder, Chetana STEM Labs story, robotics education vision, STEM transformation India, educational innovation Hyderabad"
+        path="/about"
+      />
+      <StructuredData type="organization" />
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -262,6 +272,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
